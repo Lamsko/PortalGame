@@ -1,6 +1,7 @@
 package com.jhf;
 /**
  * Created by Witold on 13.02.2017.
+ * super
  */
 
 import java.util.*;
@@ -25,7 +26,7 @@ public class Portal {
 
             if(polaPolozenia.isEmpty()) {
                 wynik = "zatopiony";
-                System.out.println("Auć! Zatopiłeś portal" + nazwa + " :(");
+                System.out.println("Auć! Zatopiłeś portal: " + nazwa + " :(");
             }
             else {
                 wynik = "trafiony";

@@ -1,7 +1,7 @@
 package com.jhf;
 
 import java.util.*;
-import java.lang.String;
+
 
 
 public class PortalGra {
@@ -24,6 +24,7 @@ public class PortalGra {
         System.out.println("Twoim celem jest zatopienie trzech portali.");
         System.out.println("pornhub.com, youporn.com, redtube.com");
         System.out.println("Postaraj się je zatopić w jak najmniejszej ilości ruchów.");
+        System.out.println("Portale mają współrzędne od a0 do g6");
 
         for (Portal rozmieszczanyPortal : listaPortali) {
             ArrayList<String> nowePolozenie = pomocnik.rozmiescPortal(3);
@@ -62,7 +63,7 @@ public class PortalGra {
             System.out.println("Zwycięstwo!");
         }
         else {
-            System.out.println("Strasznie sie grzebales! Zajelo Ci to az " + iloscRuchow + "ruchów!");
+            System.out.println("Strasznie sie grzebales! Zajelo Ci to az " + iloscRuchow + " ruchów!");
             System.out.println("Przegrałeś!");
         }
     } // end zakonczGre
@@ -71,5 +72,6 @@ public class PortalGra {
         PortalGra gra = new PortalGra();
         gra.przygotujGre();
         gra.rozpocznijGre();
+        gra.zakonczGre();
     }
 }

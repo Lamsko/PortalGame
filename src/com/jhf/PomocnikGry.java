@@ -37,7 +37,6 @@ public class PomocnikGry {
         }
         while (!powodzenie & prob++ < 200 ) { // g	ówna ptla poszukiwania
             polozenie = (int) (Math.random() * wielkoscPlanszy); // wybór losowego punktu pocztkowego
-            //System.out.print(" sprawd" + po	ozenie);
             int x = 0; // n-ty fragment rozmieszczanego portalu
             powodzenie = true; // zak	adamy, e si uda	o
             while (powodzenie && x < wielkoscPortalu) { // szukamy ssiadujcych pustych pól planszy
@@ -51,7 +50,6 @@ public class PomocnikGry {
                                 powodzenie = false; // niepowodzenie
                     }
                 } else { // znalezione pole ju jest zajte
-                    // System.out.print(" ju zajte " + location);
                     powodzenie = false; // niepowodzenie
                 }
             }
@@ -59,7 +57,7 @@ public class PomocnikGry {
         int x = 0; // zamieniamy na wspó	rzdne
         int wiersz = 0;
         int kolumna = 0;
-// System.out.println("\n");
+
         while (x < wielkoscPortalu) {
             plansza[wspolrzedne[x]] = 1; // zaznaczamy pole planszy jako zajte
             wiersz = (int) (wspolrzedne[x] / dlugoscPlanszy); // okrelenie wiersza
@@ -67,7 +65,6 @@ public class PomocnikGry {
             pomoc = String.valueOf(alfabet.charAt(kolumna)); // konwersja do postaci alfanumerycznej
             zajetePola.add(pomoc.concat(Integer.toString(wiersz)));
             x++;
-// System.out.print(" wspó	rzdne "+x+" = "+zajetePola.get(x-1));
         }
 // System.out.println("\n");
         return zajetePola;
